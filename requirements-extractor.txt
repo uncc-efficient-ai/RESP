@@ -1,0 +1,3 @@
+# Optional local answer extraction used for paper accuracy reporting.
+-r requirements.txt
+vllm==0.8.5

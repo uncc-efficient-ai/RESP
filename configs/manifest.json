@@ -1,0 +1,463 @@
+[
+  {
+    "config": "configs/figure2/dense_gsm8k.yaml",
+    "paper": "Figure 2: dense GSM8K reference",
+    "group": "figure2",
+    "method": "Dense",
+    "calibration": null,
+    "reported_sparsities": [
+      0
+    ]
+  },
+  {
+    "config": "configs/figure2/flap_c4_20.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "FLAP",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure2/flap_c4_30.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "FLAP",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/flap_gold_gsm8k_20.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "FLAP",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure2/flap_gold_gsm8k_30.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "FLAP",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/gisp_c4.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "GISP",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.2,
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/gisp_gold_gsm8k.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "GISP",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/owl_c4_20.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "OWL",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure2/owl_c4_30.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "OWL",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/owl_gold_gsm8k_20.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "OWL",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure2/owl_gold_gsm8k_30.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "OWL",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/wanda_c4_20.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "Wanda",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure2/wanda_c4_30.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "Wanda",
+    "calibration": "c4",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure2/wanda_gold_gsm8k_20.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure2/wanda_gold_gsm8k_30.yaml",
+    "paper": "Figure 2: C4 versus gold GSM8K calibration",
+    "group": "figure2",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure3/gisp_gold_gsm8k.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "GISP",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/figure3/gisp_self_gsm8k.yaml",
+    "paper": "Figure 3(a): self-generated calibration; Figure 3(b): degradation at high sparsity",
+    "group": "figure3",
+    "method": "GISP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/figure3/wanda_gold_gsm8k_20.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure3/wanda_gold_gsm8k_30.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure3/wanda_gold_gsm8k_40.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/figure3/wanda_self_gsm8k_20.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "Wanda",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/figure3/wanda_self_gsm8k_30.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "Wanda",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/figure3/wanda_self_gsm8k_40.yaml",
+    "paper": "Figure 3: gold versus self-generated GSM8K calibration",
+    "group": "figure3",
+    "method": "Wanda",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/milestones_mathqa.yaml",
+    "paper": "Section 5.3: Table 2",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/refresh_ratio_000.yaml",
+    "paper": "Section 5.3: Table 3",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/refresh_ratio_020.yaml",
+    "paper": "Section 5.3: Table 3",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/refresh_ratio_040.yaml",
+    "paper": "Section 5.3: Table 3",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/refresh_ratio_060.yaml",
+    "paper": "Section 5.3: Table 3",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/refresh_ratio_080.yaml",
+    "paper": "Section 5.3: Table 3",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/ablations/refresh_ratio_100.yaml",
+    "paper": "Section 5.3: Table 3",
+    "group": "section5_ablations",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/dense_gsm8k.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Dense",
+    "calibration": null,
+    "reported_sparsities": [
+      0
+    ]
+  },
+  {
+    "config": "configs/section5/main/dense_mathqa.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Dense",
+    "calibration": null,
+    "reported_sparsities": [
+      0
+    ]
+  },
+  {
+    "config": "configs/section5/main/gisp_gsm8k.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "GISP",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/gisp_mathqa.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "GISP",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/resp_gsm8k.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/resp_mathqa.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "RESP",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/resp_no_regen_gsm8k.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "RESP w/o regeneration",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/resp_no_regen_mathqa.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "RESP w/o regeneration",
+    "calibration": "thinking",
+    "reported_sparsities": [
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/wanda_gsm8k_20.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/section5/main/wanda_gsm8k_30.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/section5/main/wanda_gsm8k_40.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  },
+  {
+    "config": "configs/section5/main/wanda_mathqa_20.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.2
+    ]
+  },
+  {
+    "config": "configs/section5/main/wanda_mathqa_30.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.3
+    ]
+  },
+  {
+    "config": "configs/section5/main/wanda_mathqa_40.yaml",
+    "paper": "Section 5.2: Table 1",
+    "group": "section5_main",
+    "method": "Wanda",
+    "calibration": "gold-thinking",
+    "reported_sparsities": [
+      0.4
+    ]
+  }
+]

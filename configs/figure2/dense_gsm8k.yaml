@@ -1,0 +1,42 @@
+system:
+  device: cuda
+model:
+  type: causal
+  struct: hf
+  name: Qwen/Qwen3-8B
+  alias: Qwen3-8B
+  torch_dtype: bfloat16
+  model_peft: false
+  load_in_8bit: false
+  custom_modeling: true
+  custom_config:
+    custom_package_location: resp/modeling
+task:
+  seed: 0
+  project: RESP
+  datasets_folder: data
+  task_mode: test
+  name: figure2_dense_gsm8k
+  output_folder: outputs/figure2_dense_gsm8k
+evaluation:
+  lm_eval: true
+  lm_eval_options:
+    output_path: outputs/figure2_dense_gsm8k
+    tasks:
+    - gsm8k_cot_sample
+    num_fewshot:
+    - 8
+    max_length: 4096
+    apply_chat_template: true
+    enable_thinking: true
+    batch_size: 16
+    gen_kwargs:
+      do_sample: true
+      temperature: 0.6
+      max_gen_toks: 2048
+    seed: 0
+report:
+  use_logger: true
+  logger:
+    log_file_path: outputs/figure2_dense_gsm8k/run.log
+  use_wandb: false

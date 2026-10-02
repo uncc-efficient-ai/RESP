@@ -1,0 +1,97 @@
+system:
+  device: cuda
+model:
+  type: causal
+  struct: hf
+  name: Qwen/Qwen3-8B
+  alias: Qwen3-8B
+  torch_dtype: bfloat16
+  model_peft: false
+  load_in_8bit: false
+  custom_modeling: true
+  custom_config:
+    custom_package_location: resp/modeling
+task:
+  seed: 0
+  project: RESP
+  datasets_folder: data
+  task_mode: prune
+  prune:
+    prune_dataset:
+      type: downstream
+      name: gsm8k_model_output
+      seq_len: 256
+      n_samples: 2000
+      total_budget: 500
+      extra_config:
+        budget_format: sample-wise
+        max_new_tokens: 2048
+        batch_size: 8
+        generation_config_sets:
+        - name: thinking
+          do_sample: true
+          temperature: 0.6
+          enable_thinking: true
+        - name: non-thinking
+          do_sample: false
+          temperature: 0.7
+          enable_thinking: false
+        - name: gold-thinking
+          enable_thinking: true
+        - name: gold-non-thinking
+          enable_thinking: false
+        saved_path: data/calibration/Qwen3-8B_gsm8k_model_output
+        used_config: thinking
+    ratio: 0.7
+    remain_ratio: 0.5
+    max_ratio: 0.99
+    batch_size: 2
+    prune_metric: grad_sp_global
+    func_name: global_grad_sp_v2
+    prune_modules: all
+    prune_separate: false
+    prune_skip: true
+    taylor: param_first
+    real_metrics: first
+    iterative: true
+    iteration: 112
+    iterative_scheduling: linear
+    scale_loss: false
+    grad_norm_sample: false
+    grad_norm_type: l1
+    scale_grad_norm: false
+    rollback: false
+    boundary_threshold: 1.5
+    eval_intermediate:
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    restore: false
+    custom_pruner: true
+    custom_config:
+      custom_package_location: resp/pruners
+  name: figure3_gisp_self_gsm8k
+  output_folder: outputs/figure3_gisp_self_gsm8k
+evaluation:
+  lm_eval: true
+  lm_eval_options:
+    output_path: outputs/figure3_gisp_self_gsm8k
+    tasks:
+    - gsm8k_cot_sample
+    num_fewshot:
+    - 8
+    max_length: 4096
+    apply_chat_template: true
+    enable_thinking: true
+    batch_size: 16
+    gen_kwargs:
+      do_sample: true
+      temperature: 0.6
+      max_gen_toks: 2048
+    seed: 0
+report:
+  use_logger: true
+  logger:
+    log_file_path: outputs/figure3_gisp_self_gsm8k/run.log
+  use_wandb: false

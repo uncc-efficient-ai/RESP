@@ -1,0 +1,23 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+
+# Downloaded datasets, calibration traces, checkpoints, and evaluation outputs
+/data/
+/outputs/
+*.pth
+*.pt
+*.pkl
+wandb/
+
+# Optional local checkout of the pinned evaluation dependency
+/modules/eval/lm-evaluation-harness/

@@ -1,0 +1,13 @@
+# Core pruning and LM Harness evaluation. Install a CUDA-compatible PyTorch build.
+torch
+numpy
+PyYAML>=6.0
+addict==2.4.0
+accelerate==0.33.0
+datasets==3.4.1
+fire==0.6.0
+matplotlib==3.9.4
+openai==1.99.9
+tqdm
+transformers==4.51.1
+lm_eval @ git+https://github.com/wangziyannb/lm-evaluation-harness.git@d7001fe49e4adf1990716ca24f48e3374a4448d6

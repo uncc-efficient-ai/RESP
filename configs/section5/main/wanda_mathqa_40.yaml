@@ -1,0 +1,79 @@
+system:
+  device: cuda
+model:
+  type: causal
+  struct: hf
+  name: Qwen/Qwen3-8B
+  alias: Qwen3-8B
+  torch_dtype: bfloat16
+  model_peft: false
+  load_in_8bit: false
+  custom_modeling: true
+  custom_config:
+    custom_package_location: resp/modeling
+task:
+  seed: 0
+  project: RESP
+  datasets_folder: data
+  task_mode: prune
+  prune:
+    prune_dataset:
+      type: downstream
+      name: mathqa_model_output
+      seq_len: 256
+      n_samples: 2000
+      total_budget: 500
+      extra_config:
+        budget_format: sample-wise
+        max_new_tokens: 2048
+        batch_size: 32
+        generation_config_sets:
+        - name: gold-thinking
+          enable_thinking: true
+        - name: gold-non-thinking
+          enable_thinking: false
+        - name: thinking
+          do_sample: true
+          temperature: 0.6
+          enable_thinking: true
+        - name: non-thinking
+          do_sample: false
+          temperature: 0.7
+          enable_thinking: false
+        saved_path: data/calibration/Qwen3-8B_mathqa_model_output
+        used_config: gold-thinking
+    ratio: 0.47
+    max_ratio: 0.99
+    prune_metric: wanda_sp
+    func_name: baseline_uniform_wanda
+    prune_modules: all
+    prune_separate: true
+    prune_skip: true
+    act_type: sparse
+    custom_pruner: true
+    custom_config:
+      custom_package_location: resp/pruners
+  name: section5_main_wanda_mathqa_40
+  output_folder: outputs/section5_main_wanda_mathqa_40
+evaluation:
+  lm_eval: true
+  lm_eval_options:
+    output_path: outputs/section5_main_wanda_mathqa_40
+    tasks:
+    - mathqa_decoding
+    num_fewshot:
+    - 0
+    max_length: 8192
+    apply_chat_template: true
+    enable_thinking: true
+    batch_size: 16
+    gen_kwargs:
+      do_sample: true
+      temperature: 0.6
+      max_gen_toks: 4096
+    seed: 0
+report:
+  use_logger: true
+  logger:
+    log_file_path: outputs/section5_main_wanda_mathqa_40/run.log
+  use_wandb: false
